@@ -6,8 +6,10 @@ function VideoList(props) {
     <ol className='video-list'>
       {props.videos.map((video) => (
         <li className='video-item'>
-          <div className="video-title">{video.title}</div>
-          <div className="video-length">{video.minutes + 'm ' + video.seconds + 's'}</div>
+          <div className='video-title'>{video.title}</div>
+          <div className='video-length'>
+            {video.minutes + 'm ' + video.seconds + 's'}
+          </div>
         </li>
       ))}
     </ol>

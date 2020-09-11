@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import VideoList from './VideoList';
+import React, { useEffect, useState } from 'react';
+// import VideoList from './VideoList';
 import './index.css';
 
 function VideoModule() {
@@ -125,27 +125,39 @@ function VideoModule() {
     },
   ]);
 
-  const [video, setVideo] = useState({});
+  const [videoUrl, setVideoUrl] = useState(
+    'https://assets.thankview.com/assets/videos/walkthrough/1_Creating_A_Campaign.mp4'
+  );
+  const [thumbnail, setThumbnail] = useState(
+    'https://assets.thankview.com/assets/videos/thumbnails/9.jpg'
+  );
+
+  useEffect(() => {
+    setThumbnail()
+  }, []);
 
   return (
     <div className='parent-container'>
       <div className='video-list'>
         <h1>ThankView Walkthrough</h1>
         <div className='video-list-container'>
-          <VideoList videos={videos} />
+          <ol className='video-list'>
+            {videos.map((video) => (
+              <li
+                onClick={() => {
+                  setThumbnail(video.thumb);
+                  setVideoUrl(video.url);
+                }}
+              >
+                {video.title}
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
       <div className='video-player'>
-        <video
-          controls
-          poster='https://assets.thankview.com/assets/videos/thumbnails/1.jpg'
-          autoPlay
-          className='video-component'
-        >
-          <source
-            src='https://assets.thankview.com/assets/videos/walkthrough/1_Creating_A_Campaign.mp4'
-            type='video/mp4'
-          />
+        <video controls poster={thumbnail} autoPlay className='video-component'>
+          <source src={videoUrl} type='video/mp4' />
         </video>
       </div>
     </div>
