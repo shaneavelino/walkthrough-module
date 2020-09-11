@@ -1,0 +1,33 @@
+.parent-container {
+  position: fixed;
+  display: flex;
+  width: 900px;
+  height: 500px;
+  top: 20px;
+  left: 25%;
+}
+
+.parent-container h1 {
+  font-size: 24px;
+  margin: 20px;
+}
+
+.parent-container span {
+  font-size: 16px;
+}
+
+.video-list {
+  background-color: white;
+  width: 100%;
+}
+
+.video-player {
+  background-color: lightgray;
+  width: 100%;
+}
+
+.video-component {
+  position: relative;
+  width: 100%;
+  top: 25%;
+}

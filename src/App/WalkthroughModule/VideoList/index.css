@@ -1,0 +1,18 @@
+.video-list ol {
+  width: 125px;
+  font-size: 16px;
+  list-style-type: decimal-leading-zero;
+}
+
+.video-item {
+  margin: 20px;
+  width: 100%;
+}
+
+.video-title {
+  position: relative;
+}
+
+.video-length {
+  float: right;
+}
