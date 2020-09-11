@@ -133,7 +133,7 @@ function VideoModule() {
   );
 
   useEffect(() => {
-    setThumbnail()
+    setThumbnail();
   }, []);
 
   return (
@@ -156,7 +156,13 @@ function VideoModule() {
         </div>
       </div>
       <div className='video-player'>
-        <video controls poster={thumbnail} autoPlay className='video-component'>
+        <video
+          controls
+          poster={thumbnail}
+          key={videoUrl}
+          autoPlay
+          className='video-component'
+        >
           <source src={videoUrl} type='video/mp4' />
         </video>
       </div>
