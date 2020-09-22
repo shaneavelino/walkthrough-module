@@ -1,0 +1,30 @@
+h1 {
+  font-size: 24px;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 20px;
+}
+
+ol {
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+  overflow: auto;
+  max-height: 392px;
+  padding-inline-start: 0;
+}
+
+li {
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #edeff0;
+  padding: 20px;
+}
+
+.video-list {
+  background-color: white;
+  position: relative;
+  width: 100%;
+}

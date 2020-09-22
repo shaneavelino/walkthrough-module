@@ -1,0 +1,11 @@
+.video-player {
+  background-color: lightgray;
+  position: relative;
+  width: 100%;
+}
+
+video {
+  position: relative;
+  width: 100%;
+  top: 25%;
+}
